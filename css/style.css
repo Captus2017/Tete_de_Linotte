@@ -1,0 +1,3312 @@
+@font-face {
+	font-family: "MervaleScript";
+	src: url('../typo/mervale-script/MervaleScript-Regular.ttf');
+}
+
+@font-face {
+	font-family: "prestij-demo_Regular";
+	src: url('../typo/mervale-script/Prestij_Regular_Demo.otf');
+}
+
+@font-face {
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/polar.otf");
+  font-family: 'Polar';
+}
+
+section{
+     width: 100%;
+     height: 970px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 90%;
+    margin-top: 35%;
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+
+/*****************header*********************/
+/*header{
+    height:auto;
+    width: 100%;
+    background-color: #000000;
+    font-size: 2vw;
+    }
+
+#menu Ensemble du menu 
+{
+        font-weight : bold;  on met le texte en gras 
+        font-size : 12px; hauteur du texte : 12 pixels 
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style : none;
+   
+}
+#menu ul Liste   
+{
+        list-style : none;  on supprime le style par défaut de la liste 
+        line-height : 21px;  on définit une hauteur pour chaque élément 
+        text-align : center;  on centre le texte qui se trouve dans la liste 
+        padding-left: 0;
+        text-align: center;
+     
+}
+#menu li a:hover Lorsque la souris passe sur un des liens   
+{
+        color: #000; On passe le texte en noir... 
+        background: #fff;  ... et au contraire, le fond en blanc
+}
+
+#menu li:hover ul, #menu li li:hover ul   Sous-listes lorsque la souris passe sur un élément de liste
+{
+        left: auto;  Repositionnement normal 
+    background-color: black;
+    
+
+}
+
+#menu a  Contenu des listes
+{
+        display : block;  on change le type d'élément, les liens deviennent des balises de type block 
+        padding : 0;  aucune marge intérieure 
+        
+    
+        color : #fff;  couleur du texte 
+        text-decoration : none;  on supprime le style par défaut des liens (la plupart du temps = souligné) 
+        width : 144px;  largeur 
+}
+
+#menu li ul  Sous-listes 
+{ 
+        position: absolute;  Position absolue 
+        width: 144px;  Largeur des sous-listes 
+        left: -999em;
+
+}
+
+
+.logo_header{
+   	width: 200%;
+	height: auto;
+    }/*
+
+
+----------------------*/
+
+
+.header{
+  text-align: center;
+  position: relative;
+    padding-bottom: 15px;
+    background: black;
+}
+  .header-logo{
+    display: inline-block;
+    margin:20px;
+  }
+  
+  .header-toogle{
+    display:none; 
+  }
+  
+  .header-menu a{
+      font-family: sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+
+    font-size: 1.6rem;
+    color:azure;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: black;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  .header-menu a:hover{
+    border:  5px solid #fd6159;
+    color: #fff;
+  }
+
+@media (max-width:993px){
+  
+  .header-menu a{
+    border-top: 1px solid #ddd; 
+    display:block;
+  }
+  
+  .header-toogle{
+    position: absolute; 
+    right: 10px; 
+    top:25px; 
+    display: block;
+  }
+  .header-toogle-close{
+    display:none;
+  }
+
+  
+  #main-header:target .header-toogle-close{
+    display:inline; 
+  }
+  #main-header:target .header-toogle-open{
+    display:none; 
+  }
+  
+  /* version menu non animé */
+  /*.header-menu{
+    display:none;
+  }
+  #main-header:target .header-menu {
+    display:block;
+  }*/
+  
+  /* version menu non animé */
+  .header-menu{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease-in-out;
+    /* animation de height à height auto/100% pas possible, alors on utilise un tricks avec le max height ... */
+  }
+  #main-header:target .header-menu {
+    max-height: 300px;
+  }
+}
+
+/******************fin header************************/
+
+
+/***************** titre ************/
+
+#ancre-titre {
+    display: flex;
+}
+
+source {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+video#titre-video{
+    min-width: 100%;
+    min-height: 100%;
+    background: url(../img/FondNoir.jpg) no-repeat;
+
+    position: relative;
+    transition: 1s opacity;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+.video-synopsis {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: black;
+}
+
+/*
+.button-video-synopsis {
+    position: absolute;
+    align-self: flex-end;
+  width: 100%;
+    height: 5%;
+    
+  border: none; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+
+.button-video-synopsis:hover { 
+   background: rgba(255,0,0,0.5);
+}
+*/
+
+
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 150px;
+    
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 125%;
+    margin-left: -400%;
+    }
+
+
+/*******************fin du titre**************/
+
+/*********************synopsis**************/
+
+.FondBird{
+    position: relative;
+    
+    width: 38%;
+    height: auto;
+    
+    display: flex;
+transform: translateX(95%);
+    padding-top: 20%;
+}
+
+.synopsis {
+    
+    text-align: justify;
+    font-size: 22px;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+        position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 100px;
+    top: 1200px;
+}
+
+.synopsis p{
+            position: absolute;
+
+	font-family: arial;
+    padding-right:30%;
+    padding-left: 30%;
+}
+/*********************fin de synopsis**************/
+
+/*********************trailer********************/
+.trailer{
+    background: url("../img/apple-1835805_1920.jpg");
+    background-size: 100% 115%;
+    
+    position: relative;
+    
+}
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 125px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 200px;
+    margin-left: 250px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+ 
+/*************************fin trailer*****************/
+
+/**********************equipe**********************/
+
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 8%;
+    transform: translate(50%);
+
+    font-family: "MervaleScript";
+    font-size: 100px;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1550px;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: Montserrat,sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("../equipe/Lowbot.png");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("../img/chatTropMignon.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("../equipe/Antoine.png");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("../equipe/Marie.png");
+}
+.accordion ul li:nth-child(5) {
+  background-image: url("../equipe/Maxime.png");
+}
+.accordion ul li:nth-child(6) {
+  background-image: url("../equipe/Dimitri.png");
+}
+.accordion ul li:nth-child(7) {
+  background-image: url("../equipe/Jessica.jpg");
+}
+.accordion ul li:nth-child(8) {
+  background-image: url("../equipe/Simon.jpg");
+}
+.accordion ul:hover li {
+  width: 8%;
+}
+.accordion ul:hover li:hover {
+  width: 60%;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.about {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+/*******************fin equipe ********************/
+
+/******************** Personnages n*************/
+
+.slider-container {
+  position: relative;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: all-scroll;
+}
+
+.slider-control {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 12%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  will-change: opacity;
+  opacity: 0;
+}
+.slider-control.inactive:hover {
+  cursor: auto;
+}
+.slider-control:not(.inactive):hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.slider-control.left {
+  left: 0;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.slider-control.right {
+  right: 0;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.slider-pagi {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 2rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0;
+  list-style-type: none;
+}
+.slider-pagi__elem {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+.slider-pagi__elem:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+.slider-pagi__elem.active:before, .slider-pagi__elem:hover:before {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.slider {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+.slider.animating {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  will-change: transform;
+}
+.slider.animating .slide__bg {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  will-change: transform;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slide.active .slide__overlay,
+.slide.active .slide__text {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.slide__bg {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  will-change: transform;
+}
+.slide:nth-child(1) {
+  left: 0;
+}
+.slide:nth-child(1) .slide__bg {
+  left: 0;
+  background-image: url("../img/PersoLinotte1.jpg");
+}
+.slide:nth-child(1) .slide__overlay-path {
+  fill: #e99c7e;
+}
+@media (max-width: 991px) {
+  .slide:nth-child(1) .slide__text {
+    background-color: rgba(233, 156, 126, 0.8);
+  }
+}
+.slide:nth-child(2) {
+  left: 100%;
+}
+.slide:nth-child(2) .slide__bg {
+  left: -50%;
+  background-image: url("../img/persoLinotte2.jpg");
+}
+.slide:nth-child(2) .slide__overlay-path {
+  fill: #ffaf7d;
+}
+@media (max-width: 991px) {
+  .slide:nth-child(2) .slide__text {
+    background-color: rgba(225, 175, 125, 0.8);
+  }
+}
+.slide:nth-child(3) {
+  left: 200%;
+}
+.slide:nth-child(3) .slide__bg {
+  left: -100%;
+  background-image: url("../img/persoLinotte3.jpg");
+}
+.slide:nth-child(3) .slide__overlay-path {
+  fill: #adc5cd;
+}
+@media (max-width: 991px) {
+  .slide:nth-child(3) .slide__text {
+    background-color: rgba(173, 197, 205, 0.8);
+  }
+}
+.slide:nth-child(4) {
+  left: 300%;
+}
+.slide:nth-child(4) .slide__bg {
+  left: -150%;
+  background-image: url("../img/persoLinotte4.jpg");
+}
+.slide:nth-child(4) .slide__overlay-path {
+  fill: #cbc6c3;
+}
+@media (max-width: 991px) {
+  .slide:nth-child(4) .slide__text {
+    background-color: rgba(203, 198, 195, 0.8);
+  }
+}
+.slide__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  min-height: 810px;
+  -webkit-transition: opacity 0.2s 0.5s, -webkit-transform 0.5s 0.5s;
+  transition: opacity 0.2s 0.5s, -webkit-transform 0.5s 0.5s;
+  transition: transform 0.5s 0.5s, opacity 0.2s 0.5s;
+  transition: transform 0.5s 0.5s, opacity 0.2s 0.5s, -webkit-transform 0.5s 0.5s;
+  will-change: transform, opacity;
+  -webkit-transform: translate3d(-20%, 0, 0);
+          transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+}
+@media (max-width: 991px) {
+  .slide__overlay {
+    display: none;
+  }
+}
+.slide__overlay path {
+  opacity: 0.8;
+}
+.slide__text {
+  position: absolute;
+  width: 25%;
+  bottom: 15%;
+  left: 12%;
+  color: #fff;
+  -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+  transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
+  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+  will-change: transform, opacity;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+}
+@media (max-width: 991px) {
+  .slide__text {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+    transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+    transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+    transition: transform 0.5s 0.5s, opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+    padding: 0 1rem;
+  }
+}
+.slide__text-heading {
+  font-family: "MervaleScript", Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 991px) {
+  .slide__text-heading {
+    line-height: 20rem;
+    font-size: 3.5rem;
+  }
+}
+.slide__text-desc {
+  font-family: "prestij-demo_Regular", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 991px) {
+  .slide__text-desc {
+    display: none;
+  }
+}
+.slide__text-link {
+  z-index: 5;
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: "prestij-demo_Regular", Helvetica, Arial, sans-serif;
+  font-size: 2.3rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+@media (max-width: 991px) {
+  .slide__text-link {
+    display: none;
+  }
+}
+.slide__text-link:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: rotateX(-85deg);
+          transform: rotateX(-85deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  will-change: transform;
+}
+.slide__text-link:hover:before {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+
+/********************fin de personnages *****/
+
+
+
+/********************film *****/
+
+.Separation {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 10%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 100px;
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 3%;
+
+    transform: translateX(45%);
+    }
+
+
+/********************fin de Film*****/
+
+
+
+/*********************Making of********************/
+.makingof{
+    position: relative;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 10%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 100px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 25%;
+
+    transform: translateX(75%);
+    }
+
+/*************************fin Making OF *****************/
+
+/********************gallery photo********************/
+
+
+
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 125px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+        background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 1500px;
+    height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+    padding-left: 3%;
+}
+
+.img-c {
+  width: 175px;
+  height: 175px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+  transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+
+/******************* fin de la gallery photo**********/
+
+/******************* réseaux sociaux *************************/
+
+.Size-section-reseaux{
+     border: solid blue 1px;
+     width: 100%;
+     height: 1200px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,900,800,500,700,600);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+.titre_Réseaux h2{
+    font-family: "MervaleScript";
+    font-size: 100px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+html, body {
+  font-size: 6px;
+  background: #fbfbfb;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 860px) {
+  html, body {
+    font-size: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 10px;
+  }
+}
+
+.slider-wrapper02 {
+  position: relative;
+  max-width: 90rem;
+  min-width: 480px;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 35px 20px #DDE5EE;
+}
+.slider-wrapper02 .slider02 {
+  position: relative;
+  height: 65rem;
+  padding: 5rem 0;
+}
+.slider-wrapper02 .slider02::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider-wrapper02 .slider02 .slide-wrapper02 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider-wrapper02 .slide-navigation__squares02, .slider-wrapper02 .slide-navigation__txt02 {
+  width: 10%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.slider-wrapper02 .slide-navigation__squares02::after, .slider-wrapper02 .slide-navigation__txt02::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider-wrapper02 .slide-navigation__txt02 {
+  display: block;
+  height: 100%;
+}
+.slider-wrapper02 .slide-navigation__txt02::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider-wrapper02 .slide-navigation__txt02 ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  display: table-cell;
+  width: 30rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+  margin-left: calc(50% - 0.14rem);
+}
+.slider-wrapper02 .slide-navigation__txt02 ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider-wrapper02 .slide-navigation__txt02 li {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 0 1.2rem;
+  position: relative;
+  float: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #A1A5B8;
+}
+.slider-wrapper02 .slide-navigation__txt02 li span {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+}
+.slider-wrapper02 .slide-navigation__txt02 li span.active02 {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  color: #fd6159;
+}
+.slider-wrapper02 .slide-navigation__squares02 {
+  display: block;
+  height: 100%;
+}
+.slider-wrapper02 .slide-navigation__squares02 .squares-wrapper02 {
+  position: absolute;
+  margin-left: calc(50% - 0.4rem);
+  bottom: 5rem;
+  height: 4.6rem;
+  overflow: hidden;
+}
+.slider-wrapper02 .slide-navigation__squares02 .squares-slider02 {
+  position: relative;
+  display: block;
+  margin-top: -2.5rem;
+  -webkit-transform: translateY(-2.5rem);
+          transform: translateY(-2.5rem);
+}
+.slider-wrapper02 .slide-navigation__squares02 .square02 {
+  width: 0.6rem;
+  height: 0.6rem;
+  display: block;
+  margin: 1.3rem 0;
+  background: #A1A5B8;
+}
+.slider-wrapper02 .slide-navigation__squares02 .square.red02 {
+  background: #fd6159;
+}
+.slider-wrapper02 .slides-container02 {
+  position: relative;
+  width: 80%;
+  float: left;
+  height: 100%;
+}
+.slider-wrapper02 .slide02 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+}
+.slider-wrapper02 .slide02 img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider-wrapper02 .slide02 .slide-content02 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 5rem 5.8rem;
+  overflow: hidden;
+}
+.slider-wrapper02 .slide02 .slide-content02 h1 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  font-size: 10rem;
+  text-align: center;
+  margin: 0;
+  opacity: 0.6;
+  position: relative;
+}
+.slider-wrapper02 .slide02 .slide-content02 h2 {
+  color: #fd6159;
+	font-family: "MervaleScript";
+  font-size: 4.8rem;
+  max-width: 80%;
+  margin: 0;
+  margin-top: -6rem;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+}
+.slider-wrapper02 .slide02 .slide-txt02 {
+  position: relative;
+  display: block;
+  width: 100;
+  margin-top: 6rem;
+}
+.slider-wrapper02 .slide02 .slide-txt02::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider-wrapper02 .slide02 .slide-txt02 p {
+  margin: 0;
+  max-width: 55%;
+  color: black;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  float: left;
+}
+.slider-wrapper02 .slide02 .slide-txt02 button {
+  display: block;
+  float: right;
+  width: 18rem;
+  text-align: center;
+  background: transparent;
+  background-color:aliceblue;
+  border: 0.28rem solid #fd6159;
+  text-transform: uppercase;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.5rem;
+  color: #E34D67;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  outline: none;
+  overflow: hidden;
+}
+
+
+/******************* fin de réseaux sociaux *************************/
+
+/******************* contact *************************/
+
+/******************* fin de contact *******************/
+
+/*********************** footer ****************/
+.footer-distributed{
+	background-color: #bcffa9;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+
+.logo-footer{
+   	width: 50%;
+	height: auto;
+    }
+
+.logo-footer02{
+    display: inline-flex;
+   	width: 10%;
+	height: auto;
+    margin-bottom: 20px;
+    }
+
+
+.logo-footer03{
+    display: inline-flex;
+   	width: 7%;
+	height: auto;
+    margin-bottom: 20px;
+    }
+
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #495744;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+    font-size: 14px;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #fd6159;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #495744;
+	color: #fd6159;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #fd6159;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #495744;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	background-color:  #ffffff;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.icone-Face{
+    background: url("../img/facebookIcon.png");
+        background-size: cover;
+    background-repeat: no-repeat;
+}
+.icone-Snap{
+    background: url("../img/snapchatIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icone-Youtube{
+    background: url("../img/youtubeIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Youtube-Snap{
+    background: url("../img/youtubeIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icone-contact{
+    background: url("../img/icone-contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-bar-top{
+    background-color: black;
+    width: 100%;
+    height: 5px;
+}
+
+.footer-bar-bottom{
+    background-color: black;
+    width: 100%;
+    height: 25px;
+}
+/* -- responsive Footer --*/
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+/*******************fin de footer ******************/
+
+
+
+
+
+
+
+/* ######################## RESPONSIVE ##############################*/
+
+/*écran d’ordinateur (21″)*/
+@media screen and (min-width: 1280px) and (max-width:1919px) {
+    section{
+        width: 100%;
+        height: 800px;
+    }
+	
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 90%;
+    margin-top: 35%;
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 115px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 125%; /*changer*/
+    margin-left: -370%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+.synopsis {
+    
+    text-align: justify;
+    font-size: 17px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 65px;
+    top: 1050px;
+}
+
+.synopsis p{
+    position: absolute;
+
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:30%;
+    padding-left: 30%;
+}
+
+    
+    
+/* -- teaser --*/
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 100px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 200px;
+    margin-left: 200px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 12%;
+    margin-left: 42%;
+}
+    
+    
+/* -- equipe --*/
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 5%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 75px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.FILM{
+    position: relative;
+    
+    background: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 10%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: white;/*changer*/
+    font-size: 75px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 25%;/*changer*/
+    transform: translateX(10%);/*changer*/
+    }
+
+    
+/* MAking Of */
+.makingof{
+    position: relative;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 150% 125%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 78%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 75px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 18%;
+
+    transform: translateX(20%);
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 125px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+    background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 800px; /* changer */
+    height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+    padding-left: 3%;
+}
+
+}
+
+/* FIN @media screen and (min-width: 1280px) and (max-width:1919px) */
+
+
+
+
+/* tablette en paysage, écran d’ordinateur de taille petite et moyenne*/
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+     section{
+        width: 100%;
+        height: 450px;
+    }
+    
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 90%;
+    margin-top: 55%; /* changer */
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 100px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 75%; /*changer*/
+    margin-left: -325%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+.synopsis {
+    text-align: justify;
+    font-size: 14px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 45px;
+    top: 600px; /* changer*/ 
+}
+
+.synopsis p{
+    position: absolute;
+
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:30%;
+    padding-left: 30%;
+}
+
+    
+    
+/* -- teaser --*/
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color: black;
+    font-size: 70px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 150px;
+    margin-left: 150px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+    
+
+    
+/* -- equipe --*/
+
+section.equipe{
+     height: 900px;
+    }
+    
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 5%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 75px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+    section.FILM {
+        height: 500px;
+    }
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.frameFilm{
+    width: 175%;
+    height: 300px;
+    }
+    
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 8%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: black;/*changer*/
+    font-size: 75px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 6%;/*changer*/
+    transform: translateX(80%);/*changer*/
+    }
+
+    
+/* MAking Of */
+.makingof{
+    position: relative;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 125%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 6%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 60px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 18%;
+
+    transform: translateX(95%);
+    }
+
+    .frameMakingOf{
+    width: 125%;
+    height: 240px; 
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 125px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+        background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 600px; /* changer */
+    height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+    padding-left: 3%;
+}
+
+
+    
+
+}
+
+
+/* smartphone en paysage, tablette en portrait et petite tablette en paysage*/
+@media screen and (max-width: 959px) and (min-width: 480px) {
+    
+        section{
+        width: 100%;
+        height: 450px;
+    }
+    
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 80%;
+    margin-top: 85%; /* changer */
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 65px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 135%; /*changer*/
+    margin-left: -280%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+    
+.FondBird{
+    position: relative;
+    
+    width: 38%;
+    height: auto;
+    
+    display: flex;
+transform: translateX(95%);
+    padding-top: 62%;
+}
+    
+.synopsis {
+    text-align: justify;
+    font-size: 12px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 45px;
+    top: 600px; /* changer*/ 
+}
+
+.synopsis p{
+    position: absolute;
+
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:15%;
+    padding-left: 15%;
+}
+
+    
+    
+/* -- teaser --*/
+    .trailer {
+        width: 100%;
+        height: 300px;
+    }
+    
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color: black;
+    font-size: 45px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 150px;
+    margin-left: 50px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:45%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+    
+
+    
+/* -- equipe --*/
+
+section.equipe{
+     height: 100%;
+    }
+    
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 5%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 50px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+    section.FILM {
+        height: 300px;
+    }
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.frameFilm{
+    width: 88%;
+    height: 180px;
+    }
+    
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 8%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: black;/*changer*/
+    font-size: 35px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 6%;/*changer*/
+    transform: translateX(40%);/*changer*/
+    }
+
+    
+/* MAking Of */
+
+
+    
+.makingof{
+    position: relative;
+    
+    width: 100%;
+    height: 250px;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 6%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 25px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 25%;
+
+    transform: translateX(50%);
+    }
+
+    .frameMakingOf{
+    width: 57%;
+    height: 100px; 
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 50px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+    background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 300px; /* changer */
+    height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+    
+.img-c {
+  width: 60px;
+  height: 60px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+  
+    
+/* réseaux sociaux */ 
+    
+.Size-section-reseaux{
+     border: solid blue 1px;
+     width: 100%;
+     height: 700px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+.titre_Réseaux h2{
+    font-family: "MervaleScript";
+    font-size: 65px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+    
+    
+}
+ 
+    
+@media screen and (max-width: 479px) and (min-width: 414px) {
+    
+section{
+    width: 100%;
+    height: 200px;
+    }
+    
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 80%;
+    margin-top: 100%; /* changer */
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 50px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 65%; /*changer*/
+    margin-left: -300%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+    .synopsis{
+        width:100%;
+        height: 400px;
+    }
+    
+.FondBird{
+    position: relative;
+    
+    width: 40%;
+    height: auto;
+    
+    display: flex;
+transform: translateX(95%);
+    padding-top: 70%;
+}
+    
+.synopsis {
+    text-align: justify;
+    font-size: 8px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 35px;
+    top: 350px; /* changer*/ 
+}
+
+.synopsis p{
+    position: absolute;
+    font-size: 10px;
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:20%;
+    padding-left: 20%;
+}
+
+    
+    
+/* -- teaser --*/
+    .trailer{
+        width: 100%;
+        height: 225px;
+    }
+    
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color: black;
+    font-size: 35px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 150px;
+    margin-left: 50px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+    
+
+    
+/* -- equipe --*/
+
+section.equipe{
+     height: 100%;
+    }
+    
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 5%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 45px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+    section.FILM {
+        height: 275px;
+    }
+    
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.frameFilm{
+    width: 76%;
+    height: 165px;
+    }
+    
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 8%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: black;/*changer*/
+    font-size: 30px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 6%;/*changer*/
+    transform: translateX(34%);/*changer*/
+    }
+
+    
+/* MAking Of */
+    
+    
+.makingof{
+    position: relative;
+    
+    width: 100%;
+    height: 325px;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 6%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 35px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 25%;
+
+    transform: translateX(20%);
+    }
+
+    .frameMakingOf{
+    width: 72%;
+    height: 140px; 
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 55px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+        background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 600px; /* changer */
+  height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-left: 15%;
+  padding-right: 15%;
+
+}
+ 
+.img-c {
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+  
+    
+/* réseaux sociaux */ 
+    
+.Size-section-reseaux{
+     border: solid blue 1px;
+     width: 100%;
+     height: 800px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+.titre_Réseaux h2{
+    font-family: "MervaleScript";
+    font-size: 45px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ 
+    
+    
+}
+    
+@media screen and (max-width: 413px) and (min-width: 321px) {
+    
+section{
+    width: 100%;
+    height: 200px;
+    }
+    
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 100px;
+    height: 100px;
+    margin-left: 80%;
+    margin-top: 100%; /* changer */
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 50px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 65%; /*changer*/
+    margin-left: -300%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+    .synopsis{
+        width:100%;
+        height: 400px;
+    }
+    
+.FondBird{
+    position: relative;
+    
+    width: 40%;
+    height: auto;
+    
+    display: flex;
+transform: translateX(95%);
+    padding-top: 70%;
+}
+    
+.synopsis {
+    text-align: justify;
+    font-size: 8px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 35px;
+    top: 350px; /* changer*/ 
+}
+
+.synopsis p{
+    position: absolute;
+    font-size: 10px;
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:20%;
+    padding-left: 20%;
+}
+
+    
+    
+/* -- teaser --*/
+    .trailer{
+        width: 100%;
+        height: 225px;
+    }
+    
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color: black;
+    font-size: 35px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 150px;
+    margin-left: 50px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+    
+
+    
+/* -- equipe --*/
+
+section.equipe{
+     height: 100%;
+    }
+    
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 5%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 45px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+    section.FILM {
+        height: 275px;
+    }
+    
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.frameFilm{
+    width: 76%;
+    height: 165px;
+    }
+    
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 8%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: black;/*changer*/
+    font-size: 30px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 6%;/*changer*/
+    transform: translateX(34%);/*changer*/
+    }
+
+    
+/* MAking Of */
+    
+    
+.makingof{
+    position: relative;
+    
+    width: 100%;
+    height: 325px;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 6%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 35px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 25%;
+
+    transform: translateX(20%);
+    }
+
+    .frameMakingOf{
+    width: 72%;
+    height: 140px; 
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 55px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+        background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 600px; /* changer */
+  height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-left: 15%;
+  padding-right: 15%;
+
+}
+ 
+.img-c {
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+  
+    
+/* réseaux sociaux */ 
+    
+.Size-section-reseaux{
+     border: solid blue 1px;
+     width: 100%;
+     height: 800px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+.titre_Réseaux h2{
+    font-family: "MervaleScript";
+    font-size: 45px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ 
+    
+    
+}
+
+
+/*smartphone en portrait */
+@media screen and (max-width: 320px) {
+	 section{
+        border: solid orange 1px;
+        width: 100%;
+        height: 500px;
+    }
+    
+    section{
+    width: 100%;
+    height: 200px;
+    }
+    
+    body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+ 
+.buttonHautdePage {
+    width: 50px;
+    height: 50px;
+    margin-left: 80%;
+    margin-top: 100%; /* changer */
+    
+    opacity: 0.5;
+    
+    position: fixed;
+    z-index: 2;
+}
+    
+ 
+    #ancre-titre {
+    display: flex;
+}
+
+    
+/* -- titre --*/ 
+.TeteDeLinotte{
+	font-family: "MervaleScript";
+    font-size: 40px; /*changer*/
+    
+    color: white;
+    top: 0;
+    left: 0;
+    margin-top: 85%; /*changer*/
+    margin-left: -300%; /*changer*/
+    }
+
+    
+/* -- Synopsis --*/
+    .synopsis{
+        width:100%;
+        height: 400px;
+    }
+    
+.FondBird{
+    position: relative;
+    
+    width: 40%;
+    height: auto;
+    
+    display: flex;
+transform: translateX(95%);
+    padding-top: 70%;
+}
+    
+.synopsis {
+    text-align: justify;
+    font-size: 8px; /*changer*/
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.synopsis h3{
+    position: absolute;
+
+	font-family: "MervaleScript";
+    font-size: 23px;
+    top: 350px; /* changer*/ 
+}
+
+.synopsis p{
+    position: absolute;
+    font-size: 10px;
+    margin-top: 8%;
+	font-family: arial;
+    padding-right:20%;
+    padding-left: 20%;
+}
+
+    
+    
+/* -- teaser --*/
+    .trailer{
+        width: 100%;
+        height: 225px;
+    }
+    
+#Titre-Teaser{
+    position: absolute;
+    
+    font-family: "MervaleScript";
+    color: black;
+    font-size: 28px;
+    
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 150px;
+    margin-left: 35px;
+    }
+
+
+.video-trailer{
+    width: 50%;
+    height: auto;
+    }
+
+.video-trailer iframe {
+    position: absolute;
+    
+    width: 40%;
+    height:42%;
+
+    margin-top: 9%;
+    margin-left: 42%;
+}
+    
+
+    
+/* -- equipe --*/
+
+section.equipe{
+     height: 100%;
+    }
+    
+.titre-equipe{
+    position: relative;
+    
+    margin-top: 10%;
+    transform: translate(45%);
+
+    font-family: "MervaleScript";
+    font-size: 35px;
+}    
+    
+
+/* -- personnages --*/
+    
+    
+/* -- film --*/    
+    
+    section.FILM {
+        height: 200px;
+    }
+    
+    
+.Separation {
+    background-color: black; 
+    width: 100%;
+    height: 25px; /* changer*/
+}
+
+.frameFilm{
+    width: 60%;
+    height: 125px;
+    }
+    
+.FILM{
+    position: relative;
+    
+    background-image: url(../img/FondFilm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FILM h2{
+    position: absolute;
+
+    left: 8%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color: black;/*changer*/
+    font-size: 23px; /*changer*/
+    }
+
+.PlacementvideoFilm{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 6%;/*changer*/
+    transform: translateX(25%);/*changer*/
+    }
+
+    
+/* MAking Of */
+    
+    
+.makingof{
+    position: relative;
+    
+    width: 100%;
+    height: 300px;
+    
+    background-image: url(../img/fondMakingOF.jpg);
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+    background-position: 67%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.makingof h2{
+    position: absolute;
+
+    left: 6%;
+    top: -2%;
+    display: flex;
+    justify-content: center;
+    
+    font-family: "MervaleScript";
+    color:black;
+    font-size: 25px;
+    
+    
+    }
+
+.Placementvideo{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding-top: 23%;
+
+    transform: translateX(11%);
+    }
+
+    .frameMakingOf{
+    width: 63%;
+    height: 135px; 
+    }
+    
+    
+/* galerie */ 
+    
+.titre-galery{
+    position: relative;
+    
+    transform: translate(44%);
+    padding-bottom: 3%;
+    
+    font-family: "MervaleScript";
+    font-size: 55px;
+}
+
+.gallery-photo {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    
+        background-image: url(../img/FondGalery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery {
+  width: 200px; /* changer */
+  height: auto;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  padding-left: 7%;
+  padding-right: 7%;
+
+}
+ 
+.img-c {
+  width: 35px;
+  height: 35px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+  
+    
+/* réseaux sociaux */ 
+    
+.Size-section-reseaux{
+     border: solid blue 1px;
+     width: 100%;
+     height: 600px;
+     overflow:hidden;
+     font-size: 2vw;
+    }
+
+.titre_Réseaux h2{
+    font-family: "MervaleScript";
+    font-size: 45px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ 
+    
+}
+
+
+
+
+/* -------------------------------------- RESPONSIVE -------------------------------------- */
+/*
+#mavideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (min-aspect-ratio: 16/9) {
+  #mavideo {
+    width: 100%;
+    height: auto; /* En pratique : supérieur à la hauteur du viewport */
+/*
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #mavideo {
+    width: auto; /* En pratique : supérieur à la largeur du viewport */
+  /*  height: 100%;
+  }
+}*/
